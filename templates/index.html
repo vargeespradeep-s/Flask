@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/index.css')}}"/>
+</head>
+<body>
+    <div class="overall">
+        <!-- register -->
+        <div class="register">
+             <h1>Register</h1>
+
+            <form id="form" method="post" action="{{url_for('register')}}">
+                <!-- username -->
+                <div class="Username">
+                    <label for="Username">Full Name</label>
+                    <input id="Username" name="Username" type="text" placeholder="Enter your Username"/>
+                </div>
+                <!-- EmailAddress -->
+                <div class="EmailAddress">
+                    <label for="EmailAddress">EmailAddress</label>
+                    <input id="EmailAddress" name="EmailAddress" type="text" placeholder="Enter your EmailAddress"/>
+                </div>
+                <!-- phone number -->
+                <div class="Phone">
+                    <label for="Phone">Phone Number</label>
+                    <input id="Phone" name="Phone" type="tel" placeholder="Enter your Phone Number"/>
+                </div>
+                 <!-- phone number -->
+                 <div class="Passcode">
+                    <label for="Passcode">Passcode</label>
+                    <input id="Passcode" name="Passcode" type="Passcode" placeholder="Enter your Passcode"/>
+                </div>
+                <!-- error -->
+                <div class="errormsg">{{errormsg}}</div>
+                <!-- submit -->
+                <div class="submit">
+                    <button type="submit">Register</button>
+                    <button type="reset"> Reset</button>
+                </div>
+            </form>
+            <p>Already having account?  </p>
+            <p><a href="{{url_for('login')}}"> Login</a></p>
+        </div>
+        
+    </div>
+</body>
+</html>
